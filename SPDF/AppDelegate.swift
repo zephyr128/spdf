@@ -8,9 +8,21 @@
 
 import UIKit
 
+/// Wrapping Swift.print() within DEBUG flag
+///
+/// - Note: *print()* might cause [security vulnerabilities](https://codifiedsecurity.com/mobile-app-security-testing-checklist-ios/)
+///
+/// - Parameter object: The object which is to be logged
+///
+func print(_ object: Any) {
+    // Only allowing in DEBUG mode
+    #if DEBUG
+    Swift.print(object)
+    #endif
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
