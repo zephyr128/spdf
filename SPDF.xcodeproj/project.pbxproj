@@ -17,6 +17,7 @@
 		89F4CDEF23530295007E2E3A /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4CDEE23530295007E2E3A /* GradientView.swift */; };
 		89F4CDF72353050A007E2E3A /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4CDF62353050A007E2E3A /* Reachability.swift */; };
 		89F4CDF923530C23007E2E3A /* RestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4CDF823530C23007E2E3A /* RestManager.swift */; };
+		89F4CDFC23531EA6007E2E3A /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4CDFB23531EA6007E2E3A /* Users.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		89F4CDEE23530295007E2E3A /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		89F4CDF62353050A007E2E3A /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		89F4CDF823530C23007E2E3A /* RestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestManager.swift; sourceTree = "<group>"; };
+		89F4CDFB23531EA6007E2E3A /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,10 +136,19 @@
 		89F4CDF5235304E7007E2E3A /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				89F4CDFA23531E97007E2E3A /* Dto */,
 				89F4CDF62353050A007E2E3A /* Reachability.swift */,
 				89F4CDF823530C23007E2E3A /* RestManager.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		89F4CDFA23531E97007E2E3A /* Dto */ = {
+			isa = PBXGroup;
+			children = (
+				89F4CDFB23531EA6007E2E3A /* Users.swift */,
+			);
+			path = Dto;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +258,7 @@
 				89F4CDF72353050A007E2E3A /* Reachability.swift in Sources */,
 				89F4CDF923530C23007E2E3A /* RestManager.swift in Sources */,
 				89F4CDCF2352FA12007E2E3A /* SceneDelegate.swift in Sources */,
+				89F4CDFC23531EA6007E2E3A /* Users.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
