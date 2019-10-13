@@ -22,6 +22,8 @@ class ViewController: UIViewController {
     
     private var users: [User] = []
     
+    private var isRefreshing = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -63,6 +65,7 @@ class ViewController: UIViewController {
     }
 
     @objc func refresh(refreshControl: UIRefreshControl) {
+        isRefreshing = true
         getUsers()
         refreshControl.endRefreshing()
     }
@@ -76,7 +79,7 @@ class ViewController: UIViewController {
         currentPage += 1
         UserManager.shared.fetchUsers(page: currentPage, count: countPerPage) { (users) in
             if let users = users {
-                if self.currentPage == 1 { self.resetData() } // If the refresh was triggered
+                if self.isRefreshing { self.resetData(); self.isRefreshing = false } // If the refresh was triggered
                 self.users.append(contentsOf: users)
             }
             DispatchQueue.main.async {
