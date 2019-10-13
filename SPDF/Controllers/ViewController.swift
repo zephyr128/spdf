@@ -38,7 +38,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let cellIdentifier = "UserTableViewCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! UserTableViewCell
         
-        cell.title.text = "\(users[indexPath.row].firstName) \(users[indexPath.row].lastName)"
+        cell.title.text = "\(users[indexPath.row].firstName) \(users[indexPath.row].lastName) \(users[indexPath.row].flag)"
         
         cell.subtitle.text = "Age \(users[indexPath.row].age)"
         

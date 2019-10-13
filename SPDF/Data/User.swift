@@ -17,5 +17,27 @@ struct User {
     public let imageMedium: String
     public let imageThumb: String
     public let nationality: String
+    public var flag: String {
+        get {
+            return self.flag(country: nationality)
+        }
+    }
     public let email: String
+    
+    private func flag(country:String) -> String {
+        let base = 127397
+        var usv = String.UnicodeScalarView()
+        var error = false
+        for i in country.utf16 {
+            if let unicode = UnicodeScalar(base + Int(i)) {
+                usv.append(unicode)
+            }
+            else {
+                error = true
+                continue
+            }
+        }
+        
+        return error ? nationality : String(usv)
+    }
 }
