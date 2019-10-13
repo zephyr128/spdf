@@ -30,5 +30,26 @@ class SPDFTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func testUserFetch() {
+        
+        // Create an expectation for a background download task.
+        let expectation = XCTestExpectation(description: "Fetch user data")
+        
+        UserManager.shared.fetchUsers(page: 1, count: 10, completion: { (users) in
+            
+            // Make sure we downloaded some data.
+            XCTAssertNotNil(users, "No data was downloaded.")
+            
+            XCTAssertEqual(users?.count, 10, "User count mismatch")
+            
+            // Fulfill the expectation to indicate that the background task has finished successfully.
+            expectation.fulfill()
+            
+        })
+        
+        // Wait until the expectation is fulfilled, with a timeout of 10 seconds.
+        wait(for: [expectation], timeout: 10.0)
+    }
 
 }
