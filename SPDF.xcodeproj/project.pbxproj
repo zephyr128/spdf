@@ -23,6 +23,7 @@
 		89F4CE0C2353610D007E2E3A /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4CE0B2353610D007E2E3A /* UserTableViewCell.swift */; };
 		89F4CE102353920D007E2E3A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4CE0F2353920D007E2E3A /* Extensions.swift */; };
 		89F4CE1223539744007E2E3A /* NetworkIndicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4CE1123539744007E2E3A /* NetworkIndicationView.swift */; };
+		89F4CE142353ADE1007E2E3A /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4CE132353ADE1007E2E3A /* UserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		89F4CE0B2353610D007E2E3A /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		89F4CE0F2353920D007E2E3A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		89F4CE1123539744007E2E3A /* NetworkIndicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkIndicationView.swift; sourceTree = "<group>"; };
+		89F4CE132353ADE1007E2E3A /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				89F4CDD02352FA12007E2E3A /* ViewController.swift */,
+				89F4CE132353ADE1007E2E3A /* UserViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			files = (
 				89F4CDD12352FA12007E2E3A /* ViewController.swift in Sources */,
 				89F4CE1223539744007E2E3A /* NetworkIndicationView.swift in Sources */,
+				89F4CE142353ADE1007E2E3A /* UserViewController.swift in Sources */,
 				89F4CDCD2352FA12007E2E3A /* AppDelegate.swift in Sources */,
 				89F4CDEF23530295007E2E3A /* GradientView.swift in Sources */,
 				89F4CE00235334D0007E2E3A /* UserManager.swift in Sources */,

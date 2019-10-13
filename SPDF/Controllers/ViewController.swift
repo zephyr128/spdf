@@ -24,6 +24,8 @@ class ViewController: UIViewController {
     
     private var isRefreshing = false
     
+    let userSegueIdentifier = "UserSegueIdentifier"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -87,6 +89,14 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == userSegueIdentifier,
+            let destination = segue.destination as? UserViewController,
+            let row = tableView.indexPathForSelectedRow?.row {
+                destination.user = users[row]
+            }
+    }
 
 }
 
@@ -119,6 +129,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print("Users count \(users.count)")
         return users.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: userSegueIdentifier, sender: self)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }
