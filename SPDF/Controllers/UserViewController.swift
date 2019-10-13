@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MessageUI
 
-class UserViewController: UIViewController {
+class UserViewController: UIViewController, MFMailComposeViewControllerDelegate {
 
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var userName: UILabel!
@@ -49,10 +50,21 @@ class UserViewController: UIViewController {
         userImage.layer.cornerRadius = userImage.frame.width / 2
         userImage.clipsToBounds = true
     }
+    
     @IBAction func onEmailAction(_ sender: UIButton) {
-        if let user = user, let url = URL(string: "mailto:\(user.email)") {
-            UIApplication.shared.open(url)
+        if let user = user, MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients(["\(user.email)"])
+            mail.setMessageBody("<p>Hello \(user.firstName)!</p>", isHTML: true)
+                present(mail, animated: true)
+        } else {
+                // show failure alert
         }
+    }
+
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
     }
     
 }
