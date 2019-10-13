@@ -16,19 +16,22 @@ class UserTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        setRoundedImage()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     override func prepareForReuse() {
         title.text = nil
         subtitle.text = nil
         userImage.image = nil
+    }
+    
+    private func setRoundedImage() {
+        userImage.layer.cornerRadius = userImage.frame.width / 2
+        userImage.clipsToBounds = true
     }
 
 }
