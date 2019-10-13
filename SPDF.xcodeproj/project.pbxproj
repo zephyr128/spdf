@@ -17,7 +17,9 @@
 		89F4CDEF23530295007E2E3A /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4CDEE23530295007E2E3A /* GradientView.swift */; };
 		89F4CDF72353050A007E2E3A /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4CDF62353050A007E2E3A /* Reachability.swift */; };
 		89F4CDF923530C23007E2E3A /* RestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4CDF823530C23007E2E3A /* RestManager.swift */; };
-		89F4CDFC23531EA6007E2E3A /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4CDFB23531EA6007E2E3A /* Users.swift */; };
+		89F4CDFC23531EA6007E2E3A /* UsersDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4CDFB23531EA6007E2E3A /* UsersDto.swift */; };
+		89F4CE00235334D0007E2E3A /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4CDFF235334D0007E2E3A /* UserManager.swift */; };
+		89F4CE082353502B007E2E3A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4CE072353502B007E2E3A /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +47,9 @@
 		89F4CDEE23530295007E2E3A /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		89F4CDF62353050A007E2E3A /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		89F4CDF823530C23007E2E3A /* RestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestManager.swift; sourceTree = "<group>"; };
-		89F4CDFB23531EA6007E2E3A /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		89F4CDFB23531EA6007E2E3A /* UsersDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDto.swift; sourceTree = "<group>"; };
+		89F4CDFF235334D0007E2E3A /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		89F4CE072353502B007E2E3A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,7 @@
 		89F4CDCB2352FA12007E2E3A /* SPDF */ = {
 			isa = PBXGroup;
 			children = (
+				89F4CE0623535015007E2E3A /* Data */,
 				89F4CDF5235304E7007E2E3A /* Network */,
 				89F4CDF223530406007E2E3A /* Views */,
 				89F4CDF1235303EF007E2E3A /* Storyboards */,
@@ -146,9 +151,18 @@
 		89F4CDFA23531E97007E2E3A /* Dto */ = {
 			isa = PBXGroup;
 			children = (
-				89F4CDFB23531EA6007E2E3A /* Users.swift */,
+				89F4CDFB23531EA6007E2E3A /* UsersDto.swift */,
 			);
 			path = Dto;
+			sourceTree = "<group>";
+		};
+		89F4CE0623535015007E2E3A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				89F4CDFF235334D0007E2E3A /* UserManager.swift */,
+				89F4CE072353502B007E2E3A /* User.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,10 +269,12 @@
 				89F4CDD12352FA12007E2E3A /* ViewController.swift in Sources */,
 				89F4CDCD2352FA12007E2E3A /* AppDelegate.swift in Sources */,
 				89F4CDEF23530295007E2E3A /* GradientView.swift in Sources */,
+				89F4CE00235334D0007E2E3A /* UserManager.swift in Sources */,
 				89F4CDF72353050A007E2E3A /* Reachability.swift in Sources */,
+				89F4CE082353502B007E2E3A /* User.swift in Sources */,
 				89F4CDF923530C23007E2E3A /* RestManager.swift in Sources */,
 				89F4CDCF2352FA12007E2E3A /* SceneDelegate.swift in Sources */,
-				89F4CDFC23531EA6007E2E3A /* Users.swift in Sources */,
+				89F4CDFC23531EA6007E2E3A /* UsersDto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
