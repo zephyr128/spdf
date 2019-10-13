@@ -127,7 +127,20 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("Users count \(users.count)")
+        if users.count > 0
+        {
+            tableView.separatorStyle = .singleLine
+            tableView.backgroundView = nil
+        }
+        else
+        {
+            let noDataLabel: UILabel  = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
+            noDataLabel.text          = "No data available"
+            noDataLabel.textColor     = UIColor.lightText
+            noDataLabel.textAlignment = .center
+            tableView.backgroundView  = noDataLabel
+            tableView.separatorStyle  = .none
+        }
         return users.count
     }
     
