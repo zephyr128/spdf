@@ -21,6 +21,8 @@
 		89F4CE00235334D0007E2E3A /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4CDFF235334D0007E2E3A /* UserManager.swift */; };
 		89F4CE082353502B007E2E3A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4CE072353502B007E2E3A /* User.swift */; };
 		89F4CE0C2353610D007E2E3A /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4CE0B2353610D007E2E3A /* UserTableViewCell.swift */; };
+		89F4CE102353920D007E2E3A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4CE0F2353920D007E2E3A /* Extensions.swift */; };
+		89F4CE1223539744007E2E3A /* NetworkIndicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4CE1123539744007E2E3A /* NetworkIndicationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		89F4CDFF235334D0007E2E3A /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		89F4CE072353502B007E2E3A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		89F4CE0B2353610D007E2E3A /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		89F4CE0F2353920D007E2E3A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		89F4CE1123539744007E2E3A /* NetworkIndicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkIndicationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 				89F4CDD52352FA15007E2E3A /* Assets.xcassets */,
 				89F4CDD72352FA15007E2E3A /* LaunchScreen.storyboard */,
 				89F4CDDA2352FA15007E2E3A /* Info.plist */,
+				89F4CE0F2353920D007E2E3A /* Extensions.swift */,
 			);
 			path = SPDF;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 			children = (
 				89F4CE0D23536AE0007E2E3A /* Cells */,
 				89F4CDEE23530295007E2E3A /* GradientView.swift */,
+				89F4CE1123539744007E2E3A /* NetworkIndicationView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -278,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89F4CDD12352FA12007E2E3A /* ViewController.swift in Sources */,
+				89F4CE1223539744007E2E3A /* NetworkIndicationView.swift in Sources */,
 				89F4CDCD2352FA12007E2E3A /* AppDelegate.swift in Sources */,
 				89F4CDEF23530295007E2E3A /* GradientView.swift in Sources */,
 				89F4CE00235334D0007E2E3A /* UserManager.swift in Sources */,
@@ -286,6 +293,7 @@
 				89F4CE082353502B007E2E3A /* User.swift in Sources */,
 				89F4CDF923530C23007E2E3A /* RestManager.swift in Sources */,
 				89F4CDCF2352FA12007E2E3A /* SceneDelegate.swift in Sources */,
+				89F4CE102353920D007E2E3A /* Extensions.swift in Sources */,
 				89F4CDFC23531EA6007E2E3A /* UsersDto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -24,9 +24,10 @@ func print(_ object: Any) {
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var reachability = Reachability()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        setReachability()
         return true
     }
 
@@ -44,6 +45,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+    /// Set reachability for checking the network connection
+    func setReachability() {
+        NotificationCenter.default.addObserver(self, selector: #selector(reachabilityChanged(note:)), name: .reachabilityChanged, object: reachability)
+        do{
+            try reachability?.startNotifier()
+        } catch{
+           print("could not start reachability notifier")
+        }
+    }
+    
+    @objc func reachabilityChanged(note: Notification) {
+        
+        let reachability = note.object as! Reachability
+        
+        switch reachability.connection {
+        case .wifi, .cellular:
+            NotificationCenter.default.post(name: .networkAvailable, object: nil)
+            print("Reachable via WiFi or Cellular")
+        case .none:
+            NotificationCenter.default.post(name: .noNetwork, object: nil)
+            print("Network not reachable")
+        }
     }
 
 
