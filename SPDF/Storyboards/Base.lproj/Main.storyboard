@@ -32,7 +32,7 @@
         <!--Users-->
         <scene sceneID="bg3-xa-SBj">
             <objects>
-                <viewController id="uXX-nb-eAu" customClass="ViewController" customModule="SPDF" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uXX-nb-eAu" customClass="MainViewController" customModule="SPDF" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x7f-cA-aRI" customClass="GradientView" customModule="SPDF" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

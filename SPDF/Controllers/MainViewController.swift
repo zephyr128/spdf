@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var networkIndicatorView: NetworkIndicationView!
@@ -100,7 +100,7 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "UserTableViewCell"
@@ -114,7 +114,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             
             UserManager.shared.getUserImage(imageUrl: users[indexPath.row].imageThumb, completion: { (image) in
                 DispatchQueue.main.async {
-                    cell.userImage.image = image
+                    if let image = image {
+                        cell.userImage.image = image
+                    }
                 }
             })
             
