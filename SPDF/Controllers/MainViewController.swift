@@ -24,6 +24,8 @@ class MainViewController: UIViewController {
     
     private var isRefreshing = false
     
+    private var isNetworkAvailable = true
+    
     let userSegueIdentifier = "UserSegueIdentifier"
     
     override func viewDidLoad() {
@@ -55,6 +57,7 @@ class MainViewController: UIViewController {
     }
     
     private func updateNetworkNotification(isOnline: Bool) {
+        isNetworkAvailable = isOnline
         networkIndicatorViewHeight.constant = isOnline ? 0 : 25
         networkIndicatorViewLabel.text = isOnline ? networkIndicatorView.networkAvailableMessage : networkIndicatorView.noNetworkMessage
         networkIndicatorView.isNetworkAvailable = isOnline
@@ -78,14 +81,16 @@ class MainViewController: UIViewController {
     }
     
     private func getUsers() {
-        currentPage += 1
-        UserManager.shared.fetchUsers(page: currentPage, count: countPerPage) { (users) in
-            if let users = users {
-                if self.isRefreshing { self.resetData(); self.isRefreshing = false } // If the refresh was triggered
-                self.users.append(contentsOf: users)
-            }
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
+        if isNetworkAvailable {
+            currentPage += 1
+            UserManager.shared.fetchUsers(page: currentPage, count: countPerPage) { (users) in
+                if let users = users {
+                    if self.isRefreshing { self.resetData(); self.isRefreshing = false } // If the refresh was triggered
+                    self.users.append(contentsOf: users)
+                }
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
             }
         }
     }
