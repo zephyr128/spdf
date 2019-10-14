@@ -229,7 +229,7 @@
                         <viewLayoutGuide key="safeArea" id="18d-vE-E5I"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
-                                <color key="value" red="0.17433729287455543" green="0.10162361529919027" blue="0.74007228528477154" alpha="0.90806934931506844" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="value" red="0.17433729287455543" green="0.10162361529919027" blue="0.74007228528477154" alpha="0.95949272260273977" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
                                 <color key="value" red="0.73905038832800685" green="0.21761913708347633" blue="0.79946275941167511" alpha="0.9551851455479452" colorSpace="custom" customColorSpace="sRGB"/>
